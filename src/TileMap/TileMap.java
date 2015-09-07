@@ -27,6 +27,7 @@ public class TileMap {
 	private int height;
 	private int x;
 	private int y;
+	private boolean moving;
 	
 	//tileset
 	private BufferedImage tileset;
@@ -82,6 +83,13 @@ public class TileMap {
 		
 	}
 	
+	public int getType(int row, int col) {
+		int rc = map[row][col];
+		int r = rc / numTilesAcross;
+		int c = rc % numTilesAcross;
+		return tiles[r][c].getType();
+	}
+	
 	public void draw(Graphics g) {
 		for(int row = 0; row < 8; row++) {
 			for(int col = 0; col < 8; col++) {
@@ -97,6 +105,9 @@ public class TileMap {
 		}
 	}
 	
+	public int getNumCols() {return numCols;}
+	public int getNumRows() {return numRows;}
+	public boolean isMoving() {return moving;}
 	public int getTileSize() {
 		return tilesize;
 	}

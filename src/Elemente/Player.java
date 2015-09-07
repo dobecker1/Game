@@ -1,11 +1,11 @@
-package TileMap;
+package Elemente;
 
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
-import Elemente.Element;
 import GameInfos.Content;
+import TileMap.TileMap;
 
 public class Player extends Element{
 
@@ -40,6 +40,10 @@ public class Player extends Element{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public void update() {
+		super.update();
 	}
 	
 	public void draw(Graphics g) {
