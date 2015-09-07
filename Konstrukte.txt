@@ -1,0 +1,16 @@
+tilesize = 16
+numTilesAcross = 320 / 16  =20
+tiles 2,20
+tiles[1][0] = baum
+tiles[0][0] = ungültig
+tiles[0][1] = wiese
+tiles[0][2] = gras
+tiles[0][3] = blumen
+tiles[0][4] = wasser
+tiles[1][1] = holz
+tiles[1][2] = wasser
+
+//draw
+r = x/20
+c = x mod 20
+
